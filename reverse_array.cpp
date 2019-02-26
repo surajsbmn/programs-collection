@@ -1,11 +1,12 @@
 //Suraj Subramanian 18/2/19
-//C : reverse an array
+//C++ : reverse an array
 
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 int main(){
     int arr[10];
     for(int i=0;i<10;i++)
-        scanf("%d",&arr[i]);
+        cin>>arr[i];
     int p=0,q=9,temp;
     while(p<5){
         temp=arr[p];
@@ -15,6 +16,6 @@ int main(){
         q--;
     }
     for(int i=0;i<10;i++)
-        printf("%d\n",arr[i]);
+        cout<<arr[i];
     return 0;
 }
