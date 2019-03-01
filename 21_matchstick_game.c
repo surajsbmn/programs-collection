@@ -1,4 +1,4 @@
-//Author:Suraj Subramanian Date:19/2/19
+//Author:Suraj Subramanian 
 //21 match stick game
 #include<stdio.h>
 int main(){
