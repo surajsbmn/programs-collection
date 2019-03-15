@@ -1,4 +1,4 @@
-//Suraj Subramanian
+//      Suraj Subramanian
 //Program to implement and demo Singly Linked List
 
 #include<iostream>
@@ -12,8 +12,8 @@ bool push_back(struct node **);        //Push element to end of the list
 bool push_front(struct node **);       //Push element to the front of the list
 bool push_after(int,struct node **);    //Insert after given element in the list
 void pop_back(struct node **);            //Pop element form the end of the list
-void pop_front(struct node **);
-void pop_element(int,struct node **);
+void pop_front(struct node **);         //Pop the first element
+void pop_element(int,struct node **);   //Pop the given element
 void show(struct node **);                //Display the list
 void free_nodes(struct node **);          //Free the memory allocated to nodes
 
@@ -24,7 +24,7 @@ struct node{
 };
 
 
-
+//Main routine
 int main(){
     struct node *head=NULL;
     int choice;
@@ -84,10 +84,11 @@ int main(){
                 cout<<"INVALID CHOICE!!!"<<endl;
         }
     }
-    free_nodes(&head);
+    free_nodes(&head);          //Free all the memory
     return 0;
 }
 
+//Push element at the end of the list
 bool push_back(struct node **head){
     
     struct node *new_node=createNode();
@@ -109,6 +110,7 @@ bool push_back(struct node **head){
     return true;
 }
 
+//Push element at the front of the list
 bool push_front(struct node **head){
     struct node *new_node=createNode();
     
@@ -122,7 +124,7 @@ bool push_front(struct node **head){
 
 }
 
-
+//Push element at the middle of the list after the given element
 bool push_after(int pos,struct node **head){
     
     struct node * new_node=createNode();
@@ -140,7 +142,7 @@ bool push_after(int pos,struct node **head){
     return true;
 }
 
-
+//Pop the last element from the list
 void pop_back(struct node **head){
 
     struct node * current=*head;
@@ -161,6 +163,7 @@ void pop_back(struct node **head){
     
 }
 
+//Pop the first element from the list
 void pop_front(struct node **head){
     struct node * current=*head;
 
